@@ -17,7 +17,7 @@ body {
     align-items: left;
     color: white;
     text-align: left;
-    background-image: url("../Nappa\ 2/ban.jpg"); background-size: cover; background-position: center;
+    background-image: url("https://i.ibb.co/V43JV4x/ban.jpg"); background-size: cover; background-position: center;
     border:#cbb79b 5px solid;
     }
 .banner h1 { margin: 0; font-size:60px; -webkit-text-stroke: 2.5px #43403745}
@@ -109,7 +109,7 @@ body {
     .contenedor-principal {
       display: flex;
       min-height: 100vh;
-      background-image: url("../Nappa\ 2/bann.jpg"); background-size: cover; background-position: center;
+      background-image: url("https://i.ibb.co/pvLxZnnC/bann.jpg"); background-size: cover; background-position: center;
     }
 
 
@@ -138,7 +138,7 @@ body {
       flex: 1;
       padding: 25px;
       background-color: #a2865c1b;
-      background-image: url("../Nappa\ 2/bannn.jpg"); background-size: cover; background-position: center;
+      background-image: url("https://i.ibb.co/rR8TnVXj/bannn.jpg"); background-size: cover; background-position: center;
     }
     .contenido-texto em{
       color: #022c22;
