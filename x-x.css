@@ -1,0 +1,197 @@
+body {
+    font-family:Roboto, Helvetica, Arial, sans-serif, comic sans ms;
+    color: #2d4830;
+    background-color: #978468;
+    border: 0;
+  }
+  /*Banner principal*/
+.banner {
+    width: 100%;
+    height: 125px;
+    background-color: #9ae8a0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    color: white;
+    text-align: left;
+    background-image: url("../Nappa\ 2/ban.jpg"); background-size: cover; background-position: center;
+    border:#cbb79b 5px solid;
+    }
+.banner h1 { margin: 0; font-size:60px; -webkit-text-stroke: 2.5px #43403745}
+.banner p {color: #9ae8a0;}
+.banner button {
+    background-color: #2bb02b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  /*Lo demás :3*/
+  h1 {
+    font-size: 35px;
+    color: #defde1;
+    margin-bottom: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  h2 {
+    font-size: 30px;
+    color: #2bb02b;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  h3 {
+    font-size: 25px;
+    color: #2c823d;
+    margin-top: 12px;
+    margin-bottom: 3px;
+  }
+  p {
+    margin-bottom: 20px;
+    text-align: justify;
+    max-width: 1100px;
+    text-align: left;
+  }
+  br {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 40px 0;
+  }
+  strong {
+    color: #1a2c1b;
+  }
+  em {
+    color: #4a684d;
+    font-style: italic;
+  /*Pie de página*/
+  }
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #2d4830;
+    margin-top: 40px;
+  }
+  /*Listas (Ol, Ul, y DD)*/
+  ol li{
+    font-size: 17px;
+  }
+  ul li{
+    font-size: 17px;
+  }
+  dl{
+    font-size: 20px;
+  }
+  dt{
+    color:#2c823d;
+  }
+  dd{
+    font-size: 16px;
+  }
+  .lista-de-la-lista dd{
+   font-size:17px;
+  }
+  .lista-de-la-lista dt{
+   font-size:20px;
+   color:#36623b;
+   text-indent: 20px;  
+  }
+  footer button {
+    background-color: #fccea365;
+    height: 50px;
+    width: 150px;
+  }
+/*Banner der :3 (no toques, animal)*/
+    .contenedor-principal {
+      display: flex;
+      min-height: 100vh;
+      background-image: url("../Nappa\ 2/bann.jpg"); background-size: cover; background-position: center;
+    }
+
+
+    .banner-derecho {
+      width: 275px;
+      background-color: #79ba7f94;
+      padding: 20px;
+      border:#c5ad8cd0 5px solid;
+      
+
+      display: flex;
+      flex-direction: column; 
+      gap: 15px;
+    }
+
+    .banner-derecho img {
+      font-size: 5px;
+      width: 90%;
+      border-radius: 10px;
+      align-self: center;
+      padding-left: 7px;
+      padding-bottom: 0px;
+    }
+
+    .contenido-texto {
+      flex: 1;
+      padding: 25px;
+      background-color: #a2865c1b;
+      background-image: url("../Nappa\ 2/bannn.jpg"); background-size: cover; background-position: center;
+    }
+    .contenido-texto em{
+      color: #022c22;
+      font-style: italic;
+    }
+
+    .banner-derecho p {
+      color: #defde1;
+      font-size: 13px;
+      text-align: center;
+      padding-bottom: 15px;
+      max-width: 95%;
+    }
+    .banner-derecha p {
+      color: #defde1;
+      font-size: 13px;
+      text-align: center;
+      padding-bottom: 0px;
+      max-width: 95%;
+    }
+    /*Menu del banner :3*/
+    .menu-banner {
+      background-color: #655b4aa1;
+      color: #ffffff;
+      padding: 12px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .menu-banner h2 {
+      color: #defde1;
+      font-size: 20px;
+      text-align: center;
+      border-bottom: 2px solid #83d18a;
+      padding-bottom: 5px;
+    }
+    .menu-banner a {
+      color: #b7cc91;
+      text-decoration:none;
+      text-align: center;
+    }
+    .menu-banner ol {
+      text-align: center;
+    }
+    .menu-banner li {
+      list-style:circle;
+      font-size:15px;
+    }
+  /*Estilo del regreso al index (si, le hice un div unico, algun problemo? >:/*/
+  .beg {
+    font-family:Roboto, Helvetica, Arial, sans-serif, comic sans ms;
+  }
+  .beg button {
+    background-color: #b4693436;
+    height: 50px;
+    width: 150px;
+  }
