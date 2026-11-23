@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <LINK rel=stylesheet type="text/css" href="x-x.css">
+        <LINK rel=stylesheet type="text/css" href="x-x_(DLC Form).css">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <div class="banner" id="beg"> 
+        <h1>Eco-Venados: Mi compromiso con el reciclaje</h1>
+    </div>
+    <!-- inicio de banner-->
+  <div class="contenedor-principal">
+    <!-- banner contenido-->
+    <main class="contenido-texto">
+
+    <h2>Formulario 100% opcional (AKA: hazlo)</h2>
+    <form action="resultado.php" method="post">
+        <label>Nombre:</label><br>
+        <input class="sq" type="text" id="na" name="name" required><br><br>
+        <label>Edad:</label><br>
+        <input class="sq" type="number" id="ag" name="age" required><br><br>
+        <label>Grupo:</label><br>
+        <input class="sq" type="text" id="gr" name="group" required><br><br>
+        <label>Qué residuo generas con mayor frecuencia?</label><br>
+        <input class="sqr" type="text" id="an" name="answer" required><br><br>
+        <label>Separas tus residuos?</label><br>
+        <input class="rad" type="radio" id="any" name="answer y" required>
+        <label>Si</label><br>
+        <input class="rad" type="radio" id="ann" name="answer n" required>
+        <label>No</label><br>
+        <input class="rad" type="radio" id="ans" name="answer s" required>
+        <label>Algunas veces</label><br><br>
+        <label>Qué acción realizas para cuidar el ambiente?</label><br>
+        <input class="sqr" type="text" id="tk" name="take care" required><br><br>
+        <label>Selecciona un compromiso:</label><br>
+        <input class="rad" type="radio" id="anr" name="answer r" required>
+        <label>Reducir el uso de plástico</label><br>
+        <input class="rad" type="radio" id="ansr" name="answer sr" required>
+        <label>Separar residuos</label><br>
+        <input class="rad" type="radio" id="anp" name="answer p" required>
+        <label>Participar en campañas</label><br>
+        <input class="rad" type="radio" id="anra" name="answer ra" required>
+        <label>Reciclar aparatos electrónicos</label><br><br>
+        <label>Algún comentario o propuesta constructiva? :3</label><br>
+        <input class="sqr" type="text" id="co" name="comment" required><br><br>
+        <input class="bt" type="submit" value="Enviar">
+    </form>
+    <br><br>
+<!-- INICIO DEL MINIJUEGO  -->
+<h2 id="mini">Minijuego ^^</h2>
+<section id="eco-minijuego">
+  <style>
+    #eco-minijuego {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 575px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #f4f9f4;
+      border: 2px solid #2e7d32;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      color: #1b5e20;
+    }
+
+    #eco-minijuego h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    #eco-item-display {
+      font-size: 4rem;
+      margin: 15px 0 5px 0;
+      transition: transform 0.2s ease;
+    }
+
+    #eco-item-name {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      min-height: 24px;
+    }
+
+    .eco-bins {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .eco-btn {
+      padding: 12px 8px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: transform 0.1s, opacity 0.2s;
+    }
+
+    .eco-btn:active {
+      transform: scale(0.95);
+    }
+
+    .btn-organico { background-color: #6d4c41; }
+    .btn-reciclable { background-color: #1976d2; }
+    .btn-basura { background-color: #455a64; }
+
+    #eco-feedback {
+      margin-top: 15px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      min-height: 22px;
+    }
+
+    #eco-skip-btn {
+      margin-top: 12px;
+      padding: 7px 18px;
+      background-color: transparent;
+      color: #2e7d32;
+      border: 1.5px solid #2e7d32;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    #eco-skip-btn:hover {
+      background-color: #2e7d32;
+      color: white;
+    }
+  </style>
+
+  <h3>🌱 ¿Dónde va este residuo?</h3>
+  <p style="font-size: 0.9rem; margin-bottom: 15px;">Elige el contenedor correcto sin prisas.</p>
+
+  <!-- Área donde aparece el objeto -->
+  <div id="eco-item-display">♻️</div>
+  <div id="eco-item-name">Cargando...</div>
+
+  <!-- Botones de contenedores -->
+  <div class="eco-bins">
+    <button class="eco-btn btn-organico" onclick="checkTrash('organico')">🍂 Orgánico</button>
+    <button class="eco-btn btn-reciclable" onclick="checkTrash('reciclable')">🔄 Reciclable</button>
+    <button class="eco-btn btn-basura" onclick="checkTrash('basura')">🗑️ No Reciclable</button>
+  </div>
+
+  <div id="eco-feedback"></div>
+  <button id="eco-skip-btn" onclick="nextItem()">Siguiente residuo →</button>
+
+  <script>
+    const trashList = [
+      { emoji: "🍌", name: "Cáscara de plátano", type: "organico", tip: "Los restos de fruta se compostan fácilmente." },
+      { emoji: "🍎", name: "Corazón de manzana", type: "organico", tip: "Es materia orgánica natural." },
+      { emoji: "🍂", name: "Hojas secas", type: "organico", tip: "Ideales para abono y compostaje." },
+      { emoji: "🥤", name: "Botella de plástico", type: "reciclable", tip: "Enjuágala y aplástala si puedes antes de reciclar." },
+      { emoji: "📰", name: "Periódico viejo", type: "reciclable", tip: "El papel limpio y seco se recicla sin problema." },
+      { emoji: "🥫", name: "Lata de refresco", type: "reciclable", tip: "El aluminio se puede reciclar una y otra vez." },
+      { emoji: "📦", name: "Caja de cartón limpia", type: "reciclable", tip: "Aplánala para ahorrar espacio en el contenedor." },
+      { emoji: "🍕", name: "Caja de pizza con grasa", type: "basura", tip: "La grasa arruina las fibras del papel en el reciclaje." },
+      { emoji: "🧻", name: "Papel higiénico usado", type: "basura", tip: "Sus fibras son muy cortas y ya tienen residuos." },
+      { emoji: "🔋", name: "Pila alcalina", type: "basura", tip: "Contiene metales pesados; lo ideal es llevarla a un punto limpio." }
+    ];
+
+    let currentItem = null;
+
+    const itemDisplayEl = document.getElementById("eco-item-display");
+    const itemNameEl = document.getElementById("eco-item-name");
+    const feedbackEl = document.getElementById("eco-feedback");
+
+    function nextItem() {
+      const randomIndex = Math.floor(Math.random() * trashList.length);
+      currentItem = trashList[randomIndex];
+
+      itemDisplayEl.textContent = currentItem.emoji;
+      itemNameEl.textContent = currentItem.name;
+      feedbackEl.textContent = "";
+
+      itemDisplayEl.style.transform = "scale(1.18)";
+      setTimeout(() => itemDisplayEl.style.transform = "scale(1)", 150);
+    }
+
+    function checkTrash(selectedType) {
+      if (!currentItem) return;
+
+      if (selectedType === currentItem.type) {
+        feedbackEl.textContent = `✅ ¡Correcto! ${currentItem.tip}`;
+        feedbackEl.style.color = "#2e7d32";
+        setTimeout(() => {
+          if (feedbackEl.textContent.startsWith("✅")) {
+            nextItem();
+          }
+        }, 1600);
+      } else {
+        feedbackEl.textContent = "❌ Ese no es su contenedor, ¡intenta con otro!";
+        feedbackEl.style.color = "#c62828";
+      }
+    }
+    // Mostrar el primer objeto al cargar la página
+    nextItem();
+  </script>
+</section>
+    <div class="beg">
+        <button><a href="index.html" id="rl">Regresar a la portada</a></button>
+    </div>
+    </main>
+    <!-- banner imagenes-->
+    <aside class="banner-derecho">
+        <div class="menu-banner">
+            <h2>Mini menu de navegación</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="what.html">Qué es el reciclaje?</a></li>
+                <li><a href="types.html">Tipos de residuos</a></li>
+                <li><a href="3R.html">Las 3 R: Reducir, Reutilizar, Reciclar</a></li>
+                <li><a href="problem.html">Problemas ambientales</a></li>
+                <li><a href="school.html">El reciclaje en nuestra escuela</a></li>
+                <li><a href="comunity.html">El reciclaje en nuestra comunidad</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+                <ul>
+                    <li><a href="https://rdkstar.github.io/PAEC_Eco-Venados/formulario.html#min">Minijuego</a></li>
+                </ul>
+                <li><a href="bibliography.html">Bibliografía</a></li>
+            </ul>
+        </div>
+        <object data="https://www.w3.org/2000/svg" type="image/svg+xml">
+      <img src="https://media1.tenor.com/m/XjWq1YsrqOQAAAAd/hatsune-miku.gif" alt="Imagen" ><br>
+      <p>"Spin"</p>
+      <img src="https://media1.tenor.com/m/q2ofk7xTztcAAAAd/neru-akita-neru.gif" alt="Imagen" ><br>
+      <p>"Spin"</p>
+      <img src="https://media.tenor.com/AhtU402fQnsAAAAj/teto-teto-kasane.gif" alt="Imagen" ><br>
+      <p>"Spin"</p>
+    </aside>
+  </div>
+</body>
+
+<footer>
+     <a href="#beg"><button>Regresar al inicio</button></a>
+    <div class="banner-derecha">
+        <p>© 2026 Eco-Venados. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</html>
