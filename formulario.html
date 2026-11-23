@@ -17,36 +17,45 @@
 
     <h2>Formulario 100% opcional (AKA: hazlo)</h2>
     <form action="https://formspree.io/f/mjywpyjn" method="post">
-        <label>Nombre:</label><br>
+        <label for="na">Nombre:</label><br>
         <input class="sq" type="text" id="na" name="name" required><br><br>
-        <label>Email:</label><br>
-        <input class="sq" type="email" id="na" name="email" required><br><br>
-        <label>Edad:</label><br>
+
+        <label for="em">Email:</label><br>
+        <input class="sq" type="email" id="em" name="email" required><br><br>
+
+        <label for="ag">Edad:</label><br>
         <input class="sq" type="number" id="ag" name="age" required><br><br>
-        <label>Grupo:</label><br>
+
+        <label for="gr">Grupo:</label><br>
         <input class="sq" type="text" id="gr" name="group" required><br><br>
-        <label>Qué residuo generas con mayor frecuencia?</label><br>
+
+        <label for="an">Qué residuo generas con mayor frecuencia?</label><br>
         <input class="sqr" type="text" id="an" name="answer" required><br><br>
+
         <label>Separas tus residuos?</label><br>
-        <input class="rad" type="radio" id="any" name="answer y" required>
-        <label>Si</label><br>
-        <input class="rad" type="radio" id="ann" name="answer n" required>
-        <label>No</label><br>
-        <input class="rad" type="radio" id="ans" name="answer s" required>
-        <label>Algunas veces</label><br><br>
-        <label>Qué acción realizas para cuidar el ambiente?</label><br>
-        <input class="sqr" type="text" id="tk" name="take care" required><br><br>
+        <input class="rad" type="radio" id="any" name="separa_residuos" value="Sí" required>
+        <label for="any">Sí</label><br>
+        <input class="rad" type="radio" id="ann" name="separa_residuos" value="No" required>
+        <label for="ann">No</label><br>
+        <input class="rad" type="radio" id="ans" name="separa_residuos" value="Algunas veces" required>
+        <label for="ans">Algunas veces</label><br><br>
+
+        <label for="tk">Qué acción realizas para cuidar el ambiente?</label><br>
+        <input class="sqr" type="text" id="tk" name="take_care" required><br><br>
+
         <label>Selecciona un compromiso:</label><br>
-        <input class="rad" type="radio" id="anr" name="answer r" required>
-        <label>Reducir el uso de plástico</label><br>
-        <input class="rad" type="radio" id="ansr" name="answer sr" required>
-        <label>Separar residuos</label><br>
-        <input class="rad" type="radio" id="anp" name="answer p" required>
-        <label>Participar en campañas</label><br>
-        <input class="rad" type="radio" id="anra" name="answer ra" required>
-        <label>Reciclar aparatos electrónicos</label><br><br>
-        <label>Algún comentario o propuesta constructiva? :3</label><br>
+        <input class="rad" type="radio" id="anr" name="compromiso" value="Reducir el uso de plástico" required>
+        <label for="anr">Reducir el uso de plástico</label><br>
+        <input class="rad" type="radio" id="ansr" name="compromiso" value="Separar residuos" required>
+        <label for="ansr">Separar residuos</label><br>
+        <input class="rad" type="radio" id="anp" name="compromiso" value="Participar en campañas" required>
+        <label for="anp">Participar en campañas</label><br>
+        <input class="rad" type="radio" id="anra" name="compromiso" value="Reciclar aparatos electrónicos" required>
+        <label for="anra">Reciclar aparatos electrónicos</label><br><br>
+
+        <label for="co">Algún comentario o propuesta constructiva? :3</label><br>
         <input class="sqr" type="text" id="co" name="comment" required><br><br>
+
         <input class="bt" type="submit" value="Enviar">
     </form>
     <br><br>
